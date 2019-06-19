@@ -1,0 +1,42 @@
+#btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    outline: none;
+}
+.btn:hover {
+    background-color: cornflowerblue;
+}
+
+.die {               
+    width: 200px;
+    height: 200px;
+    border: 10px solid rgb(116, 97, 242);
+    border-radius: 7%;
+    box-shadow: 5px 5px 8px 0px rgba(114,114,115,1);
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(116, 97, 242);
+    user-select: none;
+}
+
+#dieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
