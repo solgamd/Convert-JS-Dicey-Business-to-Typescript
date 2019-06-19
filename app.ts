@@ -19,11 +19,11 @@ class Die {
         this.die.addEventListener('dblclick', () => {       // REMOVE DIE DBLCLICK LISTENER
             this.die.remove();
             let i = diceCorral.indexOf(this);
-            diceCorral.splice(i, 1);                        // "Above & Beyond" #3
+            diceCorral.splice(i, 1);                        
             console.log(diceCorral);     
         })
         this.die.addEventListener('click', () => {
-            this.roll();                                    // "Above & Beyond" #2
+            this.roll();                                    
         })
     }
     roll() {     
@@ -43,7 +43,7 @@ btnRoll.addEventListener('click', () => {               // ROLL DICE BUTTON CLIC
     }
 })
 
-btnSum.addEventListener('click', () => {      // "Above & Beyond" #1
+btnSum.addEventListener('click', () => {      
               
     let sum = 0;
     for (let die of diceCorral) {
