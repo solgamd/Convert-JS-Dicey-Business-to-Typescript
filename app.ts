@@ -1,17 +1,17 @@
-const dieCont: HTMLDivElement = document.getElementById('dieContainer');    // GRAB ELEMENTS FROM HTML
-const btnNew: HTMLButtonElement = document.getElementById('btnNew');         
-const btnRoll: HTMLButtonElement = document.getElementById('btnRoll');        
-const btnSum: HTMLButtonElement = document.getElementById('btnSum'); 
+const dieCont = <HTMLElement>document.getElementById('dieContainer');    // GRAB ELEMENTS FROM HTML
+const btnNew = <HTMLButtonElement>document.getElementById('btnNew');         
+const btnRoll = <HTMLButtonElement>document.getElementById('btnRoll');        
+const btnSum = <HTMLButtonElement>document.getElementById('btnSum'); 
 
-const diceCorral: Array<HTMLDivElement> = [];
+const diceCorral: Array<Die> = [];
 
 
 class Die {
     value: number;
-    die: any;
+    die: HTMLDivElement;
 
-    constructor(value: number) {
-        this.value = value;
+    constructor() {
+        this.value = 0;
         this.die = document.createElement('div');
         this.die.className = 'die';
         this.roll();
@@ -28,11 +28,11 @@ class Die {
     }
     roll() {     
         this.value = Math.floor(Math.random() * 6 + 1);
-        this.die.textContent = this.value;
+        this.die.textContent = this.value.toString();
     }
 }
 
-btnNew.addEventListener('click', () => {                // NEW DICE BUTTON CLICK LISTENER
+btnNew.addEventListener('click', () => {               // NEW DICE BUTTON CLICK LISTENER
     let newDie = new Die();
     diceCorral.push(newDie);
 })
